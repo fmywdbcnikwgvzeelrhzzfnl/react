@@ -1,14 +1,19 @@
 import React from "react";
-import './css/Header.css';
+import '../css/Header.css';
+import {Button} from 'reactstrap';
+import ButtonLogin from "../jsx/ButtonLogin.jsx";
+
 
 export default class Header extends React.Component {
     render() {
-        const c_items = this.props.items; //делаем короткую запись для переданных параметров
         return (
             <header className="header">
-                <ul>
-                    {c_items.map(item => <li><a href={item.link}>{item.title}</a></li>)}
-                </ul>
+                <div>Logo - ReactJS. Lesson3</div>
+                <div>
+                    <Button color="danger">TEST</Button>
+                    <ButtonLogin/>
+                </div>
+
             </header>
         );
     }

@@ -1,17 +1,43 @@
-import React from "react";
-import '../css/Content.css';
+/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
-export default class Content extends React.Component {
+import React from "react";
+import '../css/ButtonLogin.css';
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+
+
+export default class ButtonLogin extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modal: false
+        };
+
+        this.toggle = this.toggle.bind(this);
+    }
+
+    /**
+     * Обработчик
+     */
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
+
     render() {
         return (
-            <div className="content">
-                <article>
-                    <h3>Название</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi atque cupiditate
-                        dignissimos
-                        esse explicabo, illum incidunt magnam maiores molestiae nam nesciunt perspiciatis provident quis
-                        reiciendis repudiandae tempore, voluptatem. Officiis.</p>
-                </article>
+            <div>
+                <Button color="danger" onClick={this.toggle} className="buttonLogin">Войти (modal)</Button>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className="buttonLogin_Modal">
+                    <ModalHeader toggle={this.toggle}>Войти</ModalHeader>
+                    <ModalBody>
+                        Введите логин и пароль:
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.toggle}>Войти</Button>{' '}
+                        <Button color="secondary" onClick={this.toggle}>Отмена</Button>
+                    </ModalFooter>
+                </Modal>
             </div>
         );
     }

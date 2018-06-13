@@ -1,3 +1,10 @@
+//файл настроек WebPack
+
+// require - функция node.js, которая выполняет файл path.js и возвращает в переменную path значение,
+// которое было помечено как экспортируемое в файле path.js. расширение .
+// js можно не указывать.
+// можно ничего не возвращать в path
+// http://dnzl.ru/view_post.php?id=377
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); //подключаем Extract text
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -5,7 +12,7 @@ const webpack = require('webpack'); //для подключения jquery в п
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, 'src/index.js')
+        main: path.resolve(__dirname, 'src/index.jsx')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -14,7 +21,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'

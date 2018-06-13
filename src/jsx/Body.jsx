@@ -1,18 +1,16 @@
 import React from "react";
-import './Header.css';
+import '../css/Body.css';
+import Menu from "../jsx/Menu.jsx";
+import Content from "../jsx/Content.jsx";
 
 export default class Body extends React.Component {
-    al(){
-        alert("test");
-    }
-
     render() {
-        const c_items = this.props.items; //делаем короткую запись для переданных параметров
+        let items=this.props.items;
         return (
-            <div onClick={this.al} className="menu">
-                <ul>
-                    {c_items.map(item=><li><a href={item.link}>{item.title}</a></li>)}
-                </ul>
+            <div className="body">
+                <Menu type="left" items={items}/>
+                <Content/>
+                <Menu type="right" items={items}/>
             </div>
         );
     }

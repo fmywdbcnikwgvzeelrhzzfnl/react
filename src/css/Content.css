@@ -1,4 +1,6 @@
-.leftMenu{
-    color: red;
-    background-color: aqua;
+.content{
+    background-color: whitesmoke;
+    width: 100%;
+    margin: 2px;
+    padding: 10px;
 }
