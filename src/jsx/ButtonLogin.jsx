@@ -8,11 +8,12 @@ import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 export default class ButtonLogin extends React.Component {
     constructor(props) {
         super(props);
+        this.toggle = this.toggle.bind(this);
         this.state = {
             modal: false
         };
 
-        this.toggle = this.toggle.bind(this);
+
     }
 
     /**

@@ -4,6 +4,7 @@ import Header from './jsx/Header.jsx';
 import Body from './jsx/Body.jsx';
 import Footer from './jsx/Footer.jsx';
 import Menu from './jsx/Menu.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css'; //http://reactstrap.github.io/
 
 import './css/Container.css';
 
@@ -27,6 +28,14 @@ const top_menu_items = [
     {
         link: "#",
         title: "Отчеты"
+    },
+    {
+        link: "#",
+        title: "Документы"
+    },
+    {
+        link: "#",
+        title: "Требования"
     },
 ];
 
