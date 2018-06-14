@@ -2,7 +2,19 @@
 
 import React from "react";
 import '../css/ButtonLogin.css';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {
+    Button,
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    InputGroup,
+    Input,
+    InputGroupAddon,
+    Form,
+    FormGroup,
+    Label
+} from 'reactstrap';
 
 
 export default class ButtonLogin extends React.Component {
@@ -12,8 +24,6 @@ export default class ButtonLogin extends React.Component {
         this.state = {
             modal: false
         };
-
-
     }
 
     /**
@@ -32,7 +42,21 @@ export default class ButtonLogin extends React.Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className="buttonLogin_Modal">
                     <ModalHeader toggle={this.toggle}>Войти</ModalHeader>
                     <ModalBody>
-                        Введите логин и пароль:
+                        <Form>
+                            <div>
+                                Введите логин и пароль:
+                            </div>
+                            <br/>
+                            <FormGroup>
+                                <Label for="login">Логин</Label>
+                                <Input type="text" name="login" id="login" placeholder="login"/>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="password">Пароль</Label>
+                                <Input type="password" name="password" id="password"
+                                       placeholder="password"/>
+                            </FormGroup>
+                        </Form>
                     </ModalBody>
                     <ModalFooter>
                         <Button color="primary" onClick={this.toggle}>Войти</Button>{' '}
