@@ -27,7 +27,7 @@ export default class ButtonLogin extends React.Component {
     render() {
         return (
             <div>
-                <Button color="danger" onClick={this.toggle} className="buttonLogin">Войти (modal)</Button>
+                <Button color="danger" onClick={this.toggle} className="buttonLogin">Войти</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className="buttonLogin_Modal">
                     <ModalHeader toggle={this.toggle}>Войти</ModalHeader>
                     <ModalBody>
