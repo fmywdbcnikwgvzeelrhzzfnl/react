@@ -10,7 +10,6 @@ export default class Header extends React.Component {
             <header className="header">
                 <div>Logo - ReactJS. Lesson3</div>
                 <div>
-                    <Button color="danger">TEST</Button>
                     <ButtonLogin/>
                 </div>
 
