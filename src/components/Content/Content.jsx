@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/Content.css';
+import './Content.css';
 import { Table } from 'reactstrap';
 
 export default class Content extends React.Component {
