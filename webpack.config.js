@@ -21,6 +21,12 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
@@ -35,7 +41,8 @@ module.exports = {
                     use: ['css-loader']
                 })
 
-            }
+            },
+
         ]
     },
     plugins: [
@@ -55,10 +62,10 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: ['.js','.jsx'],
-        alias:{
-            components: path.resolve(__dirname,'src/components'),
-            pages: path.resolve(__dirname,'src/pages')
+        extensions: ['.js', '.jsx'],
+        alias: {
+            components: path.resolve(__dirname, 'src/components'),
+            pages: path.resolve(__dirname, 'src/pages')
         }
     },
     devServer: {

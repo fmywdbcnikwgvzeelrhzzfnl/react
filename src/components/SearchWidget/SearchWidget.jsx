@@ -1,9 +1,9 @@
 import React from "react";
 import {Fragment} from 'react';
 
-import './RightPanel.css';
+import './SearchWidget.css';
 
-export default class RightPanel extends React.Component {
+export default class SearchWidget extends React.Component {
     constructor(props) {
         super(props);
 
