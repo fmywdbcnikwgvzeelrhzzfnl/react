@@ -1,21 +1,7 @@
-.header div{
-    margin: auto;
+.rightPanel{
     display: flex;
-    justify-content: center;
-}
-
-.header img {
-    width: 40px;
-    margin-right: 12px;
-}
-
-.header a{
-    color: white;
-    link: white;
-
-}
-.header a:hover{
-    color: coral;
-    link: coral;
-
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
 }

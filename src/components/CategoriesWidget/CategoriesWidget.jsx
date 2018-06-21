@@ -1,9 +1,9 @@
 import React from "react";
 import {Fragment} from 'react';
 
-import './SearchWidget.css';
+import './CategoriesWidget.css';
 
-export default class SearchWidget extends React.Component {
+export default class CategoriesWidget extends React.Component {
     constructor(props) {
         super(props);
 
@@ -22,7 +22,9 @@ export default class SearchWidget extends React.Component {
     render() {
         return (
             <Fragment>
-
+                <div>
+                    CATEGORY
+                </div>
             </Fragment>
         );
     }

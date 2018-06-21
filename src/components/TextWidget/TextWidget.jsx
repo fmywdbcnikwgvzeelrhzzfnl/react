@@ -22,7 +22,9 @@ export default class TextWidget extends React.Component {
     render() {
         return (
             <Fragment>
-
+                <div>
+                    TEXT
+                </div>
             </Fragment>
         );
     }

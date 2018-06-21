@@ -13,7 +13,7 @@ export default class PagesHome extends React.Component {
         return (
             <div className="container">
                 <Header/>
-                <Body items={[{title: "one", link: "#"}]}/>
+                <Body/>
                 <Footer/>
 
             </div>

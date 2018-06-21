@@ -1,21 +1,10 @@
 import React from "react";
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-} from 'reactstrap';
 
+import SearchWidget from "components/SearchWidget";
+import CategoriesWidget from "components/CategoriesWidget";
+import TextWidget from "components/TextWidget";
 
 import './RightPanel.css';
-import Logo from './logo.svg';
 
 export default class RightPanel extends React.Component {
     constructor(props) {
@@ -35,8 +24,10 @@ export default class RightPanel extends React.Component {
 
     render() {
         return (
-            <div>
-                <img src={Logo}/>
+            <div className="rightPanel">
+                <SearchWidget />
+                <CategoriesWidget />
+                <TextWidget />
             </div>
         );
     }

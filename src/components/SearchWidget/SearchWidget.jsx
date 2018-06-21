@@ -22,7 +22,9 @@ export default class SearchWidget extends React.Component {
     render() {
         return (
             <Fragment>
-
+                <div>
+                    SEARCH
+                </div>
             </Fragment>
         );
     }

@@ -1,25 +1,42 @@
 import React from "react";
+
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem
+} from 'reactstrap';
+
 import './Menu.css';
-import classNames from 'classnames';
+import ButtonLogin from "components/ButtonLogin";
 
 export default class Menu extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
 
     render() {
-        const type = this.props.type;
-        const items = this.props.items;
-        const className = classNames(
-            "menu",
-            {
-                "horizontalMenu": type === "top",
-                "verticalMenu": type === "left" || type === "right",
-            }
-        );
         return (
-            <nav className={className}>
-                <ul>
-                    {items.map(item => <li><a href={item.link}>{item.title}</a></li>)}
-                </ul>
-            </nav>
+            <div></div>
+
         );
     }
 }
