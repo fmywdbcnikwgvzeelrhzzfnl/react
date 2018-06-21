@@ -1,7 +1,10 @@
 .rightPanel{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    padding: 10px;
-    box-sizing: border-box;
+    width: 380px;
+    margin: 10px 0px 0px 0px;
+}
+
+.rightPanel .widget{
+    margin-bottom: 10px;
 }

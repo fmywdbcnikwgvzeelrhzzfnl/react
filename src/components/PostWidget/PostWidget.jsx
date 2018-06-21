@@ -5,9 +5,9 @@ import {
 } from 'reactstrap';
 import {InputGroup, InputGroupAddon, InputGroupText, Input} from 'reactstrap';
 
-import './TextWidget.css';
+import './PostWidget.css';
 
-export default class TextWidget extends React.Component {
+export default class PostWidget extends React.Component {
     constructor(props) {
         super(props);
 
@@ -25,14 +25,15 @@ export default class TextWidget extends React.Component {
 
     render() {
         return (
-            <div className="widget">
+            <div className="postWidget">
                 <Card>
-                    <CardHeader>Text widget</CardHeader>
+                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
                     <CardBody>
-                        <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam at
-                            corporis ducimus eligendi eos error eum harum, ipsam, laudantium magni necessitatibus nisi
-                            officiis placeat quae quas sapiente veritatis voluptates?
+                        <CardTitle>Post title</CardTitle>
+                        <CardText>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ducimus, error ipsa possimus sint suscipit ullam? Architecto asperiores at consequuntur deleniti, dolorem explicabo, ipsa maiores nam neque nulla quam totam.
                         </CardText>
+                        <Button color="primary">Read More ..</Button>
                     </CardBody>
                 </Card>
             </div>
