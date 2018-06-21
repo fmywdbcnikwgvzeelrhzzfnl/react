@@ -54,6 +54,13 @@ module.exports = {
             //'jQuery': '../node_modules/jquery/jquery.js'
         })
     ],
+    resolve: {
+        extensions: ['.js','.jsx'],
+        alias:{
+            components: path.resolve(__dirname,'src/components'),
+            pages: path.resolve(__dirname,'src/pages')
+        }
+    },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         historyApiFallback: true,

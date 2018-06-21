@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';   //нужно только в главном компоненте
-import Header from './components/Header/Header';
-import Body from './components/Body/Body';
-import Footer from './components/Footer/Footer';
-import Menu from './components/Menu/Menu';
+import PageHome from 'pages/PageHome';
 import 'bootstrap/dist/css/bootstrap.min.css'; //http://reactstrap.github.io/
 
 import './css/Container.css';
@@ -51,10 +48,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="container">
-                <Header/>
-                <Menu type="top" items={top_menu_items}/>
-                <Body items={top_menu_items}/>
-                <Footer/>
+                <PageHome/>
             </div>
         );
     }

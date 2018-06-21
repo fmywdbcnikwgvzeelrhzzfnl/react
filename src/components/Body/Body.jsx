@@ -8,7 +8,6 @@ export default class Body extends React.Component {
         let items=this.props.items;
         return (
             <div className="body">
-                <Menu type="left" items={items}/>
                 <Content/>
                 <Menu type="right" items={items}/>
             </div>

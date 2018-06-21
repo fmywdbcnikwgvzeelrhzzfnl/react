@@ -1,6 +1,6 @@
 import React from "react";
 import {Button} from 'reactstrap';
-import ButtonLogin from "components/ButtonLogin";
+import ButtonLogin from "../ButtonLogin/ButtonLogin.jsx";
 import './Header.css';
 
 export default class Header extends React.Component {
