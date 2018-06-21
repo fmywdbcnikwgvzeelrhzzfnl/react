@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';   //нужно только в главном компоненте
-import Header from './jsx/Header.jsx';
-import Body from './jsx/Body.jsx';
-import Footer from './jsx/Footer.jsx';
-import Menu from './jsx/Menu.jsx';
+import Header from './components/Header/Header';
+import Body from './components/Body/Body';
+import Footer from './components/Footer/Footer';
+import Menu from './components/Menu/Menu';
+import 'bootstrap/dist/css/bootstrap.min.css'; //http://reactstrap.github.io/
 
 import './css/Container.css';
 
@@ -27,6 +28,14 @@ const top_menu_items = [
     {
         link: "#",
         title: "Отчеты"
+    },
+    {
+        link: "#",
+        title: "Документы"
+    },
+    {
+        link: "#",
+        title: "Требования"
     },
 ];
 

@@ -1,7 +1,7 @@
 import React from "react";
-import '../css/Body.css';
-import Menu from "../jsx/Menu.jsx";
-import Content from "../jsx/Content.jsx";
+import './Body.css';
+import Menu from "components/Menu";
+import Content from "components/Content";
 
 export default class Body extends React.Component {
     render() {

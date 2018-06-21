@@ -1,0 +1,21 @@
+.header div{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header img {
+    width: 40px;
+    margin-right: 12px;
+}
+
+.header a{
+    color: white;
+    link: white;
+
+}
+.header a:hover{
+    color: coral;
+    link: coral;
+
+}

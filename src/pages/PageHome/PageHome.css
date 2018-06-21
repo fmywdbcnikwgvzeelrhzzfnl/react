@@ -1,0 +1,77 @@
+.menu {
+    color: black;
+    background-color: darkslateblue;
+}
+
+/*************************************************************************************************/
+
+.verticalMenu {
+    min-width: 300px;
+    max-width: 300px;
+    background-color: lightpink;
+}
+
+.verticalMenu ul{
+    padding: 10px;
+}
+
+
+.verticalMenu ul li {
+    display: flex;
+    height: 20px;
+}
+
+.verticalMenu a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: indigo;
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.verticalMenu a:hover {
+    text-shadow: 0 0 1px rgba(80,80,80,0.7);
+}
+
+/*************************************************************************************************/
+.horizontalMenu {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    margin: 1px 0px;
+}
+
+.horizontalMenu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+    margin: auto;
+    height: 60px;
+    padding: 10px;
+}
+
+.horizontalMenu ul li {
+    display: flex;
+    height: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+.horizontalMenu a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-transform: capitalize;
+    padding: 0px 10px 0px 10px;
+}
+
+.horizontalMenu li:hover a{
+    background-color: indigo;
+}
+
+.horizontalMenu a:hover {
+    text-shadow: 0 0 2px rgba(200,200,200,0.7);
+}
+
