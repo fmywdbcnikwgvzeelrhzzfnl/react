@@ -3,7 +3,8 @@ import './Content.css';
 import {Table} from 'reactstrap';
 import PostWidget from "components/PostWidget";
 import BreadCrumbs from "components/BreadCrumbs";
-import PageTitle from "components/PageTitle/PageTitle";
+import PageTitle from "components/PageTitle";
+import PagesPanel from "components/PagesPanel";
 
 export default class Content extends React.Component {
     render() {
@@ -11,9 +12,11 @@ export default class Content extends React.Component {
             <div className="content">
                 <BreadCrumbs/>
                 <PageTitle/>
+                <PagesPanel/>
                 <PostWidget/>
                 <PostWidget/>
                 <PostWidget/>
+                <PagesPanel/>
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import {
     Card, CardImg, CardText, CardBody, CardHeader,
-    CardTitle, CardSubtitle, Button
+    CardTitle, CardSubtitle, Button, CardFooter
 } from 'reactstrap';
 import {InputGroup, InputGroupAddon, InputGroupText, Input} from 'reactstrap';
 
@@ -27,7 +27,7 @@ export default class PostWidget extends React.Component {
         return (
             <div className="postWidget">
                 <Card>
-                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=600&h=180" alt="Card image cap" />
                     <CardBody>
                         <CardTitle>Post title</CardTitle>
                         <CardText>
@@ -35,6 +35,9 @@ export default class PostWidget extends React.Component {
                         </CardText>
                         <Button color="primary">Read More ..</Button>
                     </CardBody>
+                    <CardFooter className="text-muted">
+                        Posted on June 6, 2018 by Me
+                    </CardFooter>
                 </Card>
             </div>
         );
