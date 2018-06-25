@@ -33,9 +33,7 @@ export default class PagesPanel extends React.PureComponent {
                     </PaginationItem>
                     {items.map((item) =>
                         <PaginationItem className={page == item ? "active" : ""}>
-                            <PaginationLink href="#" onClick={event => {
-                                this.handleChangePage(event, {item})
-                            }}>
+                            <PaginationLink href="#" onClick={event => {this.handleChangePage(event, item)}}>
                                 {item}
                             </PaginationLink>
                         </PaginationItem>

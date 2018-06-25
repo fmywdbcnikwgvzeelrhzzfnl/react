@@ -9,10 +9,12 @@ import PostContainer from "containers/PostContainer";
 
 export default class ContentPost extends React.PureComponent {
     render() {
+        const {id}=this.props;
+
         return (
             <div className="ContentPost">
                 <BreadCrumbs/>
-                <PostContainer/>
+                <PostContainer id={id}/>
             </div>
         );
     }

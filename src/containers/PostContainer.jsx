@@ -7,8 +7,10 @@ export default class PostWidgetContainer extends React.PureComponent {
     constructor(props) {
         super(props);
 
+        const {id}=this.props;  //получаем номер поста
+
         this.state = {
-            id: 1,
+            id: id,
             title: "",
             text: "",
         };
@@ -19,7 +21,7 @@ export default class PostWidgetContainer extends React.PureComponent {
      * @param page
      */
     downloadPost = (id) => {
-        const {match} = this.props;
+        //const {match} = this.props;
 
         let str=`http://jsonplaceholder.typicode.com/posts/${id}`;
         console.log(str);
@@ -37,14 +39,13 @@ export default class PostWidgetContainer extends React.PureComponent {
             });
     };
 
+
+
     componentDidMount() {
         this.downloadPost(this.state.id);
     }
 
     render() {
-        const {match}=this.props;
-        console.log(match);
-
         return (
             <Fragment>
                 <Post {...this.state} />

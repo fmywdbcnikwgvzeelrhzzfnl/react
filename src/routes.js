@@ -13,7 +13,7 @@ export default [
         component: PagePost
     },
     {
-        path: "/post/:Id",
+        path: "/post/:id",
         exact: true,
         component: PagePost
     }
