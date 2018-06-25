@@ -1,0 +1,8 @@
+.BodyHome{
+    color: black;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 400px;
+    width: 100%;
+}
