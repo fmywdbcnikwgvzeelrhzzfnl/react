@@ -64,8 +64,9 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
-            components: path.resolve(__dirname, 'src/components'),
-            pages: path.resolve(__dirname, 'src/pages')
+            containers: path.resolve(__dirname, 'src/containers'),  //получают данные извне js с помощью ajax
+            components: path.resolve(__dirname, 'src/components'),  //компоненты страниц
+            pages: path.resolve(__dirname, 'src/pages'),            //собранные примеры страниц
         }
     },
     devServer: {
