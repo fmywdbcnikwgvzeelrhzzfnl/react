@@ -8,7 +8,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 
 import './CategoriesWidget.css';
 
-export default class CategoriesWidget extends React.Component {
+export default class CategoriesWidget extends React.PureComponent {
     constructor(props) {
         super(props);
 

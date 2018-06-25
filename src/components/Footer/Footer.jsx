@@ -14,7 +14,7 @@ import {
 
 import './Footer.css';
 
-export default class Footer extends React.Component {
+export default class Footer extends React.PureComponent {
     render() {
         return (
             <footer className="footer">

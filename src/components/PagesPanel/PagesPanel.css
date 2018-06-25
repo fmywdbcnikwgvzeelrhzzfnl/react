@@ -1,0 +1,9 @@
+.PagesPanel{
+    display: flex;
+    justify-content: right;
+    margin: 0px 16px;
+}
+
+.pagesPanel .active{
+    color: coral;
+}

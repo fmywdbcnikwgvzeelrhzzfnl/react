@@ -1,13 +1,15 @@
 import React from "react";
-import './Body.css';
+
 import Content from "components/Content";
 import RightPanel from "components/RightPanel";
 
-export default class Body extends React.Component {
+import './BodyHome.css';
+
+export default class BodyHome extends React.PureComponent {
     render() {
-        let items=this.props.items;
+        //let items = this.props.items;
         return (
-            <div className="body">
+            <div className="BodyHome">
                 <Content/>
                 <RightPanel/>
             </div>

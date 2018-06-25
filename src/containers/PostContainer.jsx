@@ -1,16 +1,16 @@
 import React from "react";
 import {Fragment} from "react";
 
-import PostList from "components/PostList/PostList";
+import Post from "components/Post";
 
 export default class PostWidgetContainer extends React.PureComponent {
     constructor(props) {
         super(props);
 
         this.state = {
-            totalPages: 10,
-            page: 1,
-            posts: []
+            id: 1,
+            title: "",
+            text: "",
         };
     }
 
@@ -18,24 +18,36 @@ export default class PostWidgetContainer extends React.PureComponent {
      * Загрузка страницы по номеру, изменение текущего состояния. Используется кнопками пагинации и здесь
      * @param page
      */
-    downloadPage = (page) => {
-        fetch(`http://jsonplaceholder.typicode.com/posts?_limit=10&_page=${page}`)
+    downloadPost = (id) => {
+        const {match} = this.props;
+
+        let str=`http://jsonplaceholder.typicode.com/posts/${id}`;
+        console.log(str);
+        fetch(`http://jsonplaceholder.typicode.com/posts/${id}`)
             .then(response => response.json())
-            .then(posts => {
-                this.setState({'page': page, posts});
-                //console.log("Container:"+this.state.posts);
+            .then(post => {
+                console.log(post);
+                this.setState({
+                        'id': id,
+                        'title': post.title,
+                        'text': post.body
+                    }
+                );
+                console.log("Container:"+this.state.posts);
             });
     };
 
     componentDidMount() {
-        this.downloadPage(this.state.page);
+        this.downloadPost(this.state.id);
     }
 
     render() {
+        const {match}=this.props;
+        console.log(match);
+
         return (
             <Fragment>
-                <PostList posts={this.state.posts} page={this.state.page} totalPages={this.state.totalPages}
-                          downloadPage={this.downloadPage}/>
+                <Post {...this.state} />
             </Fragment>
         );
     }

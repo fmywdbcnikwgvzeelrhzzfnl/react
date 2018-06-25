@@ -1,18 +1,19 @@
 import React from "react";
-import './PageHome.css';
 
 import Header from 'components/Header';
-import Body from 'components/Body';
+import BodyHome from 'components/BodyHome';
 import Footer from 'components/Footer';
 
-export default class PagesHome extends React.Component {
+import './PageHome.css';
+
+export default class PageHome extends React.PureComponent {
 
     render() {
         const menu_items = this.props.items;
         return (
             <div className="container">
                 <Header/>
-                <Body/>
+                <BodyHome/>
                 <Footer/>
             </div>
         );

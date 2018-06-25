@@ -6,7 +6,7 @@ import TextWidget from "components/TextWidget";
 
 import './RightPanel.css';
 
-export default class RightPanel extends React.Component {
+export default class RightPanel extends React.PureComponent {
     constructor(props) {
         super(props);
 

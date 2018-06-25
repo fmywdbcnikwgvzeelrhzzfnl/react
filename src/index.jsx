@@ -1,45 +1,25 @@
+//react
 import React from 'react';
 import ReactDom from 'react-dom';   //нужно только в главном компоненте
-import PageHome from 'pages/PageHome';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+
+//сторонние компоненты и стили
 import 'bootstrap/dist/css/bootstrap.min.css'; //http://reactstrap.github.io/
+//подключаем fontawesome
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faStroopwafel} from '@fortawesome/free-solid-svg-icons'
 
+library.add(faStroopwafel);
+
+//мои компоненты и стили
+import routes from './routes';
 import './css/Container.css';
-
-const top_menu_items = [
-    {
-        link: "#",
-        title: "Главная"
-    },
-    {
-        link: "#",
-        title: "Системы"
-    },
-    {
-        link: "#",
-        title: "Проекты"
-    },
-    {
-        link: "#",
-        title: "Задачи"
-    },
-    {
-        link: "#",
-        title: "Отчеты"
-    },
-    {
-        link: "#",
-        title: "Документы"
-    },
-    {
-        link: "#",
-        title: "Требования"
-    },
-];
 
 /**
  * Основной класс приложения react
  */
-class App extends React.Component {
+class App extends React.PureComponent {
     /**
      * отвечает за отрисовку страницы
      * и то, что будет помещено в начальный div приложения
@@ -47,9 +27,11 @@ class App extends React.Component {
      */
     render() {
         return (
-            <div className="container">
-                <PageHome/>
-            </div>
+            <BrowserRouter className="container">
+                <Switch>
+                    {routes.map((route) => <Route {...route}/>)}
+                </Switch>
+            </BrowserRouter>
         );
     }
 }

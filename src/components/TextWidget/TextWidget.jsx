@@ -7,7 +7,7 @@ import {InputGroup, InputGroupAddon, InputGroupText, Input} from 'reactstrap';
 
 import './TextWidget.css';
 
-export default class TextWidget extends React.Component {
+export default class TextWidget extends React.PureComponent {
     constructor(props) {
         super(props);
 

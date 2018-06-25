@@ -1,3 +1,12 @@
 .postWidget {
     margin: 0px 0px 50px 0px;
 }
+
+.postWidget .postTitle{
+    margin-left: 0px;
+}
+
+.postWidget .postTitle::first-letter{
+
+    text-transform: capitalize;
+}

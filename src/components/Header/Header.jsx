@@ -8,13 +8,22 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 import ButtonLogin from "components/ButtonLogin";
 
 import Logo from './logo.png';
 import './Header.css';
 
-export default class Header extends React.Component {
+const menu = [
+    {id: 1, title: "Home", link: "/"},
+    {id: 2, title: "Posts", link: "/post"},
+    {id: 3, title: "Users", link: "#"},
+    {id: 4, title: "Comments", link: "#"},
+    {id: 5, title: "About", link: "#"},
+];
+
+export default class Header extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -37,21 +46,20 @@ export default class Header extends React.Component {
                     <NavbarBrand href="#">
                         <img src={Logo} width="50px"/> React & Bootstrap blog
                     </NavbarBrand>
-                    <NavbarToggler  onClick={this.toggle} color="warning"/>
+                    <NavbarToggler onClick={this.toggle} color="warning"/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="#">Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="#">About</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="#">Services</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="#">Contacts</NavLink>
-                            </NavItem>
+                            {
+                                menu.map((item) =>
+                                    <NavItem>
+                                        <Link to={item.link}>
+                                            <NavLink key={item.id}>
+                                                {item.title}
+                                            </NavLink>
+                                        </Link>
+                                    </NavItem>
+                                )
+                            }
                             <NavItem>
                                 <ButtonLogin/>
                             </NavItem>

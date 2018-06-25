@@ -8,7 +8,7 @@ import {InputGroup, InputGroupAddon, InputGroupText, Input} from 'reactstrap';
 
 import './SearchWidget.css';
 
-export default class SearchWidget extends React.Component {
+export default class SearchWidget extends React.PureComponent {
     constructor(props) {
         super(props);
 

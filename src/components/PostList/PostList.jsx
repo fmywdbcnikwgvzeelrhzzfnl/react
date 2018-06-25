@@ -7,29 +7,20 @@ import {
 import {InputGroup, InputGroupAddon, InputGroupText, Input} from 'reactstrap';
 
 import './PostList.css';
-import PostWidget from "components/PostWidget/PostWidget";
+import PostWidget from "components/PostWidget";
+import PagesPanel from "components/PagesPanel";
 
+/**
+ * Список постов
+ */
 export default class PostList extends React.PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false
-        };
-    }
-
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-
     render() {
-        const posts = this.props;
+        const {posts, page, totalPages, downloadPage} = this.props;
+        //console.log("PostList:"+posts);
         return (
             <Fragment>
-                {posts.map(post => <PostWidget title={post.title} text={post.body}/>)}
+                {posts.map(post => <PostWidget key={post.id} id={post.id} title={post.title} text={post.body}/>)}
+                <PagesPanel page={page} totalPages={totalPages} downloadPage={downloadPage}/>
             </Fragment>
         );
     }

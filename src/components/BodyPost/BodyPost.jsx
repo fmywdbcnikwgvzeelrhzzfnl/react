@@ -1,17 +1,16 @@
 import React from "react";
 
-import Content from "components/Content";
+import ContentPost from "components/ContentPost";
 import RightPanel from "components/RightPanel";
 
-import './BodyHome.css';
+import './BodyPost.css';
 
-export default class BodyHome extends React.PureComponent {
+export default class BodyPost extends React.PureComponent {
     render() {
         //let items = this.props.items;
         return (
-            <div className="BodyHome">
-                <Content/>
-                <RightPanel/>
+            <div className="BodyPost">
+                <ContentPost/>
             </div>
         );
     }

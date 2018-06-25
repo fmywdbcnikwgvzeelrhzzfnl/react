@@ -1,1 +1,1 @@
-export default from './PostWidget';
+export default from './Post';
