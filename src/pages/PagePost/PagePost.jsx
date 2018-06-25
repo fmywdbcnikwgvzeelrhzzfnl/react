@@ -10,12 +10,12 @@ export default class PagePost extends React.PureComponent {
 
     render() {
         const {match} = this.props;
-        console.log(match.params);
+        const id=match.params.id;
 
         return (
             <div className="container PagePost">
                 <Header/>
-                <BodyPost/>
+                <BodyPost id={id}/>
                 <Footer/>
             </div>
         );
