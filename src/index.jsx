@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';   //нужно только в главном компоненте
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {Provider} from 'react-redux';
 
 //сторонние компоненты и стили
 import 'bootstrap/dist/css/bootstrap.min.css'; //http://reactstrap.github.io/
@@ -11,6 +12,9 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faStroopwafel} from '@fortawesome/free-solid-svg-icons'
 
 library.add(faStroopwafel);
+
+//подключаем store
+import store from './store';
 
 //мои компоненты и стили
 import routes from './routes';
@@ -27,11 +31,13 @@ class App extends React.PureComponent {
      */
     render() {
         return (
-            <BrowserRouter className="container">
-                <Switch>
-                    {routes.map((route) => <Route {...route}/>)}
-                </Switch>
-            </BrowserRouter>
+            <Provider store={store}>
+                <BrowserRouter className="container">
+                    <Switch>
+                        {routes.map((route) => <Route {...route}/>)}
+                    </Switch>
+                </BrowserRouter>
+            </Provider>
         );
     }
 }
