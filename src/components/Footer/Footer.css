@@ -1,14 +1,5 @@
 .footer{
-    display: flex;
-    justify-content: space-between;
-    background-color: burlywood;
-    height: 30px;
-
-}
-.footer span{
-    display: flex;
+    margin: auto;
     align-items: center;
     align-content: center;
-    height: 100%;
-    padding: 0px 10px;
 }

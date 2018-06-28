@@ -1,21 +1,10 @@
-.header div{
-    margin: auto;
+.rightPanel{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 380px;
+    margin: 10px 0px 0px 0px;
 }
 
-.header img {
-    width: 40px;
-    margin-right: 12px;
-}
-
-.header a{
-    color: white;
-    link: white;
-
-}
-.header a:hover{
-    color: coral;
-    link: coral;
-
+.rightPanel .widget{
+    margin-bottom: 10px;
 }

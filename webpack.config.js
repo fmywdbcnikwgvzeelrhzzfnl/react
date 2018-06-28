@@ -21,6 +21,12 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
@@ -35,7 +41,8 @@ module.exports = {
                     use: ['css-loader']
                 })
 
-            }
+            },
+
         ]
     },
     plugins: [
@@ -54,6 +61,14 @@ module.exports = {
             //'jQuery': '../node_modules/jquery/jquery.js'
         })
     ],
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            containers: path.resolve(__dirname, 'src/containers'),  //получают данные извне js с помощью ajax
+            components: path.resolve(__dirname, 'src/components'),  //компоненты страниц
+            pages: path.resolve(__dirname, 'src/pages'),            //собранные примеры страниц
+        }
+    },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         historyApiFallback: true,

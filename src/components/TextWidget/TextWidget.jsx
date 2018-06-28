@@ -1,9 +1,13 @@
 import React from "react";
-import {Fragment} from 'react';
+import {
+    Card, CardImg, CardText, CardBody, CardHeader,
+    CardTitle, CardSubtitle, Button
+} from 'reactstrap';
+import {InputGroup, InputGroupAddon, InputGroupText, Input} from 'reactstrap';
 
-import './SearchWidget.css';
+import './TextWidget.css';
 
-export default class SearchWidget extends React.Component {
+export default class TextWidget extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -21,9 +25,17 @@ export default class SearchWidget extends React.Component {
 
     render() {
         return (
-            <Fragment>
-
-            </Fragment>
+            <div className="widget">
+                <Card>
+                    <CardHeader>Text widget</CardHeader>
+                    <CardBody>
+                        <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam at
+                            corporis ducimus eligendi eos error eum harum, ipsam, laudantium magni necessitatibus nisi
+                            officiis placeat quae quas sapiente veritatis voluptates?
+                        </CardText>
+                    </CardBody>
+                </Card>
+            </div>
         );
     }
 }

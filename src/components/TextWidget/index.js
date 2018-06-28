@@ -1,1 +1,1 @@
-export default from './SearchWidget';
+export default from './TextWidget';

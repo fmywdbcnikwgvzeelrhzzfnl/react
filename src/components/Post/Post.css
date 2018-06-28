@@ -1,0 +1,11 @@
+.post {
+    margin: 0px 0px 50px 0px;
+}
+
+.post .postTitle{
+    margin-left: 0px;
+}
+
+.post .postTitle::first-letter{
+    text-transform: capitalize;
+}

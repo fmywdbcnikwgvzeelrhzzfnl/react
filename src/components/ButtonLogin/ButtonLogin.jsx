@@ -17,7 +17,7 @@ import {
 } from 'reactstrap';
 
 
-export default class ButtonLogin extends React.Component {
+export default class ButtonLogin extends React.PureComponent {
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
