@@ -28,7 +28,8 @@ export default class Post extends React.PureComponent {
     }
 
     render() {
-        const {title, text} = this.props;
+        //text и body выводятся в текст поста. в плейсхолдере это поле называется body, по смыслу text. когда сделаю бэкэнд, будет text
+        const {title, text, body } = this.props;
         return (
             <div className="post">
                 <Card>
@@ -40,7 +41,7 @@ export default class Post extends React.PureComponent {
                                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=600&h=180"
                                  alt="Card image cap"/>
                         <CardText>
-                            {text}
+                            {text}{body}
                         </CardText>
                     </CardBody>
                 </Card>

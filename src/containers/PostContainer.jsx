@@ -3,7 +3,7 @@ import {Fragment} from "react";
 
 import Post from "components/Post";
 
-export default class PostWidgetContainer extends React.PureComponent {
+export default class PostContainer extends React.PureComponent {
     constructor(props) {
         super(props);
 

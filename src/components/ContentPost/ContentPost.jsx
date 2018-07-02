@@ -5,7 +5,7 @@ import Post from "components/Post";
 import BreadCrumbs from "components/BreadCrumbs";
 import PageTitle from "components/PageTitle";
 import PagesPanel from "components/PagesPanel";
-import PostContainer from "containers/PostContainer";
+import PostContainer from "containers/PostContainerRedux";
 
 export default class ContentPost extends React.PureComponent {
     render() {

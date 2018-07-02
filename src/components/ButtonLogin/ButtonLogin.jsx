@@ -33,6 +33,10 @@ export default class ButtonLogin extends React.PureComponent {
         this.setState({
             modal: !this.state.modal
         });
+
+        //DEBUG
+        //const p=43;
+        //console.log({[p]:4});
     }
 
     render() {
