@@ -26,7 +26,6 @@ class PostContainerRedux extends React.PureComponent {
 //берем все пропсы контейнера, некоторые значения из хранилища (state)
 //и возвращаем = записываем в props
 function mapStateToProps(state, props) {
-    console.log(state.posts.items);
     return {
         ...props,
         loading: state.posts.loading,
@@ -36,9 +35,10 @@ function mapStateToProps(state, props) {
 
 //аналогично для возможных actions, которые потребуеются в контейнере
 function mapDispatchToProps(dispatch, props) {
+    //console.log(props);
     return {
         ...props,
-        load: () => loadPost(dispatch,1),
+        load: () => loadPost(dispatch,props.id),
     }
 }
 
