@@ -6,14 +6,14 @@ import PageTitle from "components/PageTitle";
 import PagesPanel from "components/PagesPanel";
 import PostWidgetContainer from "containers/PostWidgetContainer";
 
-import './Content.css';
+import './ContentPosts.css';
 
-export default class Content extends React.PureComponent {
+export default class ContentPosts extends React.PureComponent {
     render() {
         return (
             <div className="content">
                 <BreadCrumbs/>
-                <h1>Blogs</h1>
+                <h1>Posts</h1>
                 <PostWidgetContainer/>
             </div>
         );

@@ -1,1 +1,1 @@
-export default from './BodyPosts';
+export default from './BodyBlogs';

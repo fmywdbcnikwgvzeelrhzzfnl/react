@@ -1,1 +1,1 @@
-export default from './PageUsers';
+export default from './PageBlogs';

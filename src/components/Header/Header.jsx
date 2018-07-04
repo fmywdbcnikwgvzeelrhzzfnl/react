@@ -17,10 +17,8 @@ import './Header.css';
 
 const menu = [
     {id: 1, title: "Home", link: "/"},
-    {id: 2, title: "Posts", link: "/post"},
-    {id: 3, title: "Users", link: "#"},
-    {id: 4, title: "Comments", link: "#"},
-    {id: 5, title: "About", link: "#"},
+    {id: 2, title: "Blogs", link: "/blogs"},
+    {id: 3, title: "Posts", link: "/posts"},
 ];
 
 export default class Header extends React.PureComponent {

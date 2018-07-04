@@ -1,19 +1,20 @@
 import React from "react";
 
 import Header from 'components/Header';
-import BodyHome from 'components/BodyHome';
+import BodyPosts from 'components/BodyPosts';
 import Footer from 'components/Footer';
+import BreadCrumbs from "components/BreadCrumbs";
 
-import './PageHome.css';
+import './PagePosts.css';
 
-export default class PageHome extends React.PureComponent {
+export default class PagePosts extends React.PureComponent {
 
     render() {
         const menu_items = this.props.items;
         return (
             <div className="container">
                 <Header/>
-                <BodyHome/>
+                <BodyPosts/>
                 <Footer/>
             </div>
         );

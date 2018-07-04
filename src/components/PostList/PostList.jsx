@@ -16,7 +16,7 @@ import PagesPanel from "components/PagesPanel";
 export default class PostList extends React.PureComponent {
     render() {
         const {posts, page, totalPages, downloadPage} = this.props;
-        //console.log("PostList:"+posts);
+        //console.log("BlogsList:"+posts);
         return (
             <Fragment>
                 {posts.map(post => <PostWidget key={post.id} id={post.id} title={post.title} text={post.body}/>)}

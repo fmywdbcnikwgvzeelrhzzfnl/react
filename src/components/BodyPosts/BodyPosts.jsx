@@ -1,28 +1,19 @@
 import React from "react";
 
-import Content from "components/Content";
+import Content from "components/ContentPosts";
 import RightPanel from "components/RightPanel";
 import BreadCrumbs from "components/BreadCrumbs";
 
-import './BodyHome.css';
+import './BodyPosts.css';
 
-export default class BodyHome extends React.PureComponent {
+export default class BodyPosts extends React.PureComponent {
     render() {
         //let items = this.props.items;
         return (
-            <div className="BodyHome">
+            <div className="BodyPosts">
                 <Content/>
                 <RightPanel/>
             </div>
         );
-
-        /*return (
-            <div className="BodyAbout">
-                <BreadCrumbs />
-                <p>
-                    Этот движок для сайта с блогами написан в учебных целях с использованием технологий npm, webpack, react, bootstrap, css, redux.
-                </p>
-            </div>
-        );*/
     }
 }

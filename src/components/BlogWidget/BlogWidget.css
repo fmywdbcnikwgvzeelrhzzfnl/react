@@ -1,12 +1,29 @@
-.postWidget {
+.BlogWidget {
     margin: 0px 0px 50px 0px;
+    width: 200px;
+    height: auto;
+    min-height: 340px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-.postWidget .postTitle{
+.BlogWidget .description {
+    margin: auto;
+    position: relative;
+}
+
+.BlogWidget .btn {
+    margin: auto;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+.BlogWidget .postTitle {
     margin-left: 0px;
 }
 
-.postWidget .postTitle::first-letter{
-
+.BlogWidget .postTitle::first-letter {
     text-transform: capitalize;
 }

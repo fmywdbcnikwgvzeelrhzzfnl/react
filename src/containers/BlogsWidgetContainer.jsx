@@ -2,40 +2,33 @@ import React from "react";
 import {Fragment} from "react";
 
 import PostList from "components/PostList/PostList";
+import BlogsList from "components/BlogsList/BlogsList";
 
 export default class PostWidgetContainer extends React.PureComponent {
     constructor(props) {
         super(props);
 
         this.state = {
-            totalPages: 10,
-            page: 1,
-            posts: []
+            users: []
         };
     }
 
-    /**
-     * Загрузка страницы по номеру, изменение текущего состояния. Используется кнопками пагинации и здесь
-     * @param page
-     */
-    downloadPage = (page) => {
-        fetch(`http://jsonplaceholder.typicode.com/posts?_limit=10&_page=${page}`)
+    downloadPage = () => {
+        fetch(`http://jsonplaceholder.typicode.com/users`)
             .then(response => response.json())
-            .then(posts => {
-                this.setState({'page': page, posts});
-                //console.log("Container:"+this.state.posts);
+            .then(users => {
+                this.setState({users});
             });
     };
 
     componentDidMount() {
-        this.downloadPage(this.state.page);
+        this.downloadPage();
     }
 
     render() {
         return (
             <Fragment>
-                <PostList posts={this.state.posts} page={this.state.page} totalPages={this.state.totalPages}
-                          downloadPage={this.downloadPage}/>
+                <BlogsList users={this.state.users} downloadPage={this.downloadPage}/>
             </Fragment>
         );
     }

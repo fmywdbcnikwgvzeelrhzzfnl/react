@@ -1,27 +1,21 @@
 import React from "react";
 import {Fragment} from "react";
-import {
-    Card, CardImg, CardText, CardBody, CardHeader,
-    CardTitle, CardSubtitle, Button, CardFooter
-} from 'reactstrap';
-import {InputGroup, InputGroupAddon, InputGroupText, Input} from 'reactstrap';
 
-import './PostList.css';
-import PostWidget from "components/PostWidget";
-import PagesPanel from "components/PagesPanel";
+import BlogWidget from "components/BlogWidget";
+
+import './BlogsList.css';
 
 /**
- * Список постов
+ * Список блогов
  */
-export default class PostList extends React.PureComponent {
+export default class BlogsList extends React.PureComponent {
     render() {
-        const {posts, page, totalPages, downloadPage} = this.props;
-        //console.log("PostList:"+posts);
+        const {users} = this.props;
+        console.log(users);
         return (
-            <Fragment>
-                {posts.map(post => <PostWidget key={post.id} id={post.id} title={post.title} text={post.body}/>)}
-                <PagesPanel page={page} totalPages={totalPages} downloadPage={downloadPage}/>
-            </Fragment>
+            <div className="BlogsList">
+                {users.map(user => <BlogWidget key={user.id} id={user.id} name={user.name}/>)}
+            </div>
         );
     }
 }

@@ -1,18 +1,15 @@
 import React from "react";
 
-import Content from "components/Content";
-import RightPanel from "components/RightPanel";
-import BreadCrumbs from "components/BreadCrumbs";
+import ContentBlogs from "components/ContentBlogs";
 
-import './BodyPosts.css';
+import './BodyBlogs.css';
 
-export default class BodyPosts extends React.PureComponent {
+export default class BodyBlogs extends React.PureComponent {
     render() {
         //let items = this.props.items;
         return (
-            <div className="BodyPosts">
-                <Content/>
-                <RightPanel/>
+            <div className="BodyBlogs">
+                <ContentBlogs/>
             </div>
         );
     }
