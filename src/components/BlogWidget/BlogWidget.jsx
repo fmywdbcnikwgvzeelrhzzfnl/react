@@ -14,7 +14,7 @@ export default class BlogWidget extends React.PureComponent {
         let {id, name} = this.props;
         //проверка и корректировака входных параметров
         if (typeof name != 'string') name = "";
-        else name = name.substring(0, 26);
+        else name = name.substring(0, 20);
 
 
 
